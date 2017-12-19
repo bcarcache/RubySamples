@@ -86,3 +86,21 @@ unless false
 else
   print "Won't print this\n"
 end
+
+#For loop exclusive
+for num in 1...10
+  puts num
+end
+
+#For loop inclusive
+for num in 1..10
+  puts num
+end
+
+#Smart loop
+i = 20
+loop do
+  i -= 1
+  print "#{i}"
+  break if i <= 0
+end
