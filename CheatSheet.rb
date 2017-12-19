@@ -253,3 +253,21 @@ prime(97)
 def my_method(val1)
   puts val1
 end
+
+#splat definition
+def what_up(greeting, *friends)
+  friends.each { |friend| puts "#{greeting}, #{friend}!" }
+end
+
+what_up("What up", "Ian", "Zoe", "Zenas", "Eleanor")
+
+#sort function
+my_array = [3, 4, 8, 7, 1, 6, 5, 9, 2]
+
+# Call the sort! method on my_array below.
+# my_array should then equal [1, 2, 3, 4, 5, 6, 7, 8, 9].
+puts my_array
+
+my_array.sort!
+
+puts my_array
