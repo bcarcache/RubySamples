@@ -145,3 +145,111 @@ words = text.split(" ")
 words.each do |word|
   print word
 end
+
+#array of arrays
+multi_array = [[1,2,3], [4,5,6], [7,8,9]]
+
+#hash
+my_hash = {
+  "name" => "Eric",
+  "age" => 26,
+  "hungry?" => true
+}
+
+print my_hash["name"]
+
+my_hash["new_spec"] = true
+
+#array and hash looping
+friends = ["Milhouse", "Ralph", "Nelson", "Otto"]
+
+family = { "Homer" => "dad",
+  "Marge" => "mom",
+  "Lisa" => "sister",
+  "Maggie" => "sister",
+  "Abe" => "grandpa",
+  "Santa's Little Helper" => "dog"
+}
+
+friends.each { |x| puts "#{x}" }
+family.each { |x, y| puts "#{x}: #{y}" }
+
+s = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef", "gruyere"]]
+
+s.each do |sub_array|
+  sub_array.each { |element| puts element }
+end
+
+secret_identities = {
+  "The Batman" => "Bruce Wayne",
+  "Superman" => "Clark Kent",
+  "Wonder Woman" => "Diana Prince",
+  "Freakazoid" => "Dexter Douglas"
+}
+  
+secret_identities.each do |i1, i2|
+  puts "#{i1}: #{i2}"
+end
+
+my_array = [[1,2,3],["four","five","six"],[true, false]]
+
+my_hash = Hash.new
+my_hash["e1"] = "v1"
+
+lunch_order = {
+  "Ryan" => "wonton soup",
+  "Eric" => "hamburger",
+  "Jimmy" => "sandwich",
+  "Sasha" => "salad",
+  "Cole" => "taco"
+}
+
+lunch_order.each { |e1, e2| puts e2 }
+
+#word occurrence counter
+puts "Please enter your input"
+text = gets.chomp
+
+words = text.split(" ")
+
+frequencies = Hash.new(0)
+
+words.each do |word|
+  frequencies[word] += 1
+end
+
+frequencies = frequencies.sort_by do |freq, count|
+  count
+end
+frequencies.reverse!
+
+frequencies.each do |v1, v2|
+	puts v1 + " " + v2.to_s
+end
+
+#prime number recognition
+def prime(n)
+  puts "That's not an integer." unless n.is_a? Integer
+  is_prime = true
+  for i in 2..n-1
+    if n % i == 0
+      is_prime = false
+    end
+  end
+  if is_prime
+    puts "#{n} is prime!"
+  else
+    puts "#{n} is not prime."
+  end
+end
+
+prime(2)
+prime(9)
+prime(11)
+prime(51)
+prime(97)
+
+#method definer
+def my_method(val1)
+  puts val1
+end
