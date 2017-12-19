@@ -104,3 +104,44 @@ loop do
   print "#{i}"
   break if i <= 0
 end
+
+#odd numbers
+i % 2 != 0
+
+#even numbers
+i % 2 == 0
+
+#array looping
+array = [1,2,3,4,5]
+
+array.each do |x|
+  x += 10
+  print "#{x}"
+end
+
+#steady loopv
+10.times { print "Hello World\n" }
+
+#While loop
+i = 1
+
+while i <= 50 do
+  print i
+  i += 1
+end
+
+#until loop
+i = 1
+
+until i == 51 do
+  print i
+  i += 1
+end
+
+#split to array
+text = "we will split each word"
+words = text.split(" ")
+
+words.each do |word|
+  print word
+end
