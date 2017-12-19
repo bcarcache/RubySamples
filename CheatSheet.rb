@@ -271,3 +271,31 @@ puts my_array
 my_array.sort!
 
 puts my_array
+
+#Combined Comparison Operator
+book_1 = "A Wrinkle in Time"
+
+book_2 = "A Brief History of Time"
+
+puts book_1 <=> book_2
+
+#descending sort
+fruits = ["orange", "apple", "banana", "pear", "grapes"]
+
+fruits.sort! do |firstBook, secondBook|
+  secondBook <=> firstBook
+end
+
+puts fruits
+
+#ascending sort
+fruits = ["orange", "apple", "banana", "pear", "grapes"]
+
+fruits.sort! do |firstBook, secondBook|
+  secondBook <=> firstBook
+end
+
+puts fruits
+
+#symbol
+:this_val = "sym val"
